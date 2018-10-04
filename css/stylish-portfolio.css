@@ -358,11 +358,6 @@ h6 {
   cursor: url(../img/my-cursor.png), pointer;
 }
 
-.animated-box .mobile,
-.animated-box .desktop {
-  position: relative;
-}
-
 .animated-box .mobile {
   width: 360px;
   height: 480px;
@@ -385,20 +380,12 @@ h6 {
   background-repeat: no-repeat;
 }
 
-.animated-box .box .layer {
-  position: absolute;
-  display: block;
-  transition: 0.5s;
-}
-
 .animated-box .mobile .layer {
   top: 37px;
   right: 25px;
   width: 80%;
   height: 80%;
   background: url(../img/mobile.png);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .animated-box .desktop .layer {
@@ -407,6 +394,13 @@ h6 {
   width: 75%;
   height: 100%;
   background: url(../img/desktop-screen.png);
+}
+
+.animated-box .mobile .layer,
+.animated-box .desktop .layer {
+  transition: 0.5s;
+  position: absolute;
+  display: block;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -453,10 +447,6 @@ h6 {
 
 .project-item .image-box {
   border-radius: 30px;
-}
-
-.project-item .image-box .multi-images {
-  position: relative;
 }
 
 .project-item .image-box .multi-images .layer {
