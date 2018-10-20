@@ -14,6 +14,10 @@ body {
   font-family: 'Krub';
 }
 
+a {
+    cursor: pointer;
+}
+
 .btn-xl {
   padding: 1.25rem 2.5rem;
 }
