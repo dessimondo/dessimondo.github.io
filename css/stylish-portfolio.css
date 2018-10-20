@@ -14,12 +14,50 @@ body {
   font-family: 'Krub';
 }
 
-a {
-    cursor: pointer;
-}
-
 .btn-xl {
   padding: 1.25rem 2.5rem;
+}
+
+.bg-yellow {
+  background-color: #fae600;
+}
+
+.bg-teal {
+  background-color: #31cdb5;
+}
+
+.bg-blue {
+  background-color: #3ca8e8;
+}
+
+.y2w, .w2y, .t2w, .w2t, .b2w, .w2b {
+  height: 11vh;
+  background-size: 100% 12vh;
+  background-repeat: no-repeat;
+}
+
+.y2w { 
+  background-image: url('../img/yellow2white.jpg');
+}
+
+.w2y {
+  background-image: url('../img/white2yellow.jpg');
+}
+
+.t2w {
+  background-image: url('../img/teal2white.jpg');
+}
+
+.w2t {
+  background-image: url('../img/white2teal.jpg');
+}
+
+.b2w {
+  background-image: url('../img/blue2white.jpg');
+}
+
+.w2b {
+  background-image: url('../img/white2blue.jpg');
 }
 
 .content-section {
@@ -234,6 +272,49 @@ h6 {
   border-radius: 20px;
   margin: auto auto 2rem;
   box-shadow: 0 2px 40px -2px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  display: block;
+  position: relative;
+  box-shadow: 0 2px 40px -2px rgba(0, 0, 0, 0.2);
+}
+
+.project-text {
+  display: block;
+  position: relative;
+  margin: 10% 0;
+}
+
+@media (min-width: 992px) {
+  .project-text {
+    margin: 20% 10%;
+  }
+}
+
+.project-text h1 {
+  padding: 10% 0;
+  font-size: 50px;
+}
+
+.project-text h1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  left: 0;
+  border-bottom: 3px solid;
+}
+
+.project-text h2::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 60px;
+  width: 50%;
+  left: 0;
+  border-bottom: 3px solid;
 }
 
 .video-item {
