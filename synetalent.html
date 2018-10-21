@@ -21,7 +21,8 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="http://mynameismatthieu.com/WOW/dist/wow.min.js"></script>
   </head>
 
   <body id="page-top">
@@ -63,7 +64,7 @@
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="row">
-            <div class="col-lg-10 mx-auto text-center">
+            <div class="col-lg-10 mx-auto text-center wow fadeInDown">
                 <h2 class="mt-5 mb-5"><span class="text-secondary">SyneTalent</span></h2>
                 <p class="mt-5 mb-5">
                     SyneTalent is a human resource management portal built to view on both desktop and mobile.
@@ -78,16 +79,23 @@
     <section class="content-section bg-yellow">
       <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-              <div class="project-text">
+            <div class="col-lg-4">
+              <div class="project-text wow fadeInLeft">
                   <h2 class="mb-5">Home</h2>
                   <p>The homepage of the portal includes a quick search and filter function that allows the user to find the right candidate in just a few clicks.</p>
               </div>
             </div>
-            <div class="col-lg-6">              
-              <div class="project-image">
-                    <img class="img-fluid" src="img/synetalent1.jpg" alt="SyneTalent">
+            <div class="col-md-8 col-lg-5">              
+              <div class="project-image wow fadeInUp">
+                    <img class="img-fluid hvr-grow" src="img/synetalent1.jpg" alt="SyneTalent">
               </div>
+            </div>
+            <div class="mt-5 offset-3 col-6 
+                        mt-md-0 offset-md-0 col-md-4 
+                        col-lg-3">              
+                <div class="mobile-image wow fadeInUp">
+                      <img class="img-fluid" src="img/synetalent-mobile4.jpg" alt="SyneTalent">
+                </div>
             </div>
         </div>
       </div>
@@ -97,12 +105,12 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-6">              
-                <div class="project-image">
-                      <img class="img-fluid" src="img/synetalent2.jpg" alt="SyneTalent">
+                <div class="project-image wow fadeInUp">
+                      <img class="img-fluid hvr-grow" src="img/synetalent2.jpg" alt="SyneTalent">
                 </div>
               </div>
               <div class="col-lg-6">
-                  <div class="project-text">
+                  <div class="project-text wow fadeInRight">
                       <h2 class="mb-5">Map</h2>
                       <p>The world map view allows the stakeholder to have a quick glance at the statistics and numbers across the globe.</p>
                   </div>
@@ -114,15 +122,22 @@
     <section class="content-section bg-yellow">
         <div class="container">
           <div class="row">
-              <div class="col-lg-6">
-                  <div class="project-text">
+              <div class="col-lg-4">
+                  <div class="project-text wow fadeInLeft">
                       <h2 class="mb-5">Listing</h2>
                       <p>Listing of the profiles are displayed in a clean and neat grid. The most important information of the profile is available within the card.</p>
                   </div>
               </div>
-              <div class="col-lg-6">              
-                <div class="project-image">
-                    <img class="img-fluid" src="img/synetalent.jpg" alt="SyneTalent">
+              <div class="col-md-8 col-lg-5">              
+                <div class="project-image wow fadeInUp">
+                    <img class="img-fluid hvr-grow" src="img/synetalent.jpg" alt="SyneTalent">
+                </div>
+              </div>
+              <div class="mt-5 offset-3 col-6 
+                        mt-md-0 offset-md-0 col-md-4 
+                        col-lg-3">              
+                <div class="mobile-image wow fadeInUp">
+                      <img class="img-fluid" src="img/synetalent-mobile1.jpg" alt="SyneTalent">
                 </div>
               </div>
           </div>
@@ -133,15 +148,27 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-6">              
-                <div class="project-image">
-                      <img class="img-fluid" src="img/synetalent3.jpg" alt="SyneTalent">
+                <div class="project-image wow fadeInUp">
+                      <img class="img-fluid hvr-grow" src="img/synetalent3.jpg" alt="SyneTalent">
                 </div>
               </div>
               <div class="col-lg-6">
-                  <div class="project-text">
+                  <div class="project-text wow fadeInRight">
                       <h2 class="mb-5">Profile</h2>
                       <p>Everything about the candidate can be found in the profile page such as the biography, project history and contact information.</p>
                   </div>
+              </div>
+              <div class="col-6
+                        offset-lg-2 mt-lg-5 col-lg-3">              
+                <div class="mobile-image wow fadeInLeft">
+                      <img class="img-fluid" src="img/synetalent-mobile2.jpg" alt="SyneTalent">
+                </div>
+              </div>
+              <div class="mt-5 col-6 
+                        offset-lg-2 col-lg-3">              
+                <div class="mobile-image wow fadeInRight">
+                      <img class="img-fluid" src="img/synetalent-mobile3.jpg" alt="SyneTalent">
+                </div>
               </div>
           </div>
         </div>
@@ -157,7 +184,7 @@
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
-        <ul class="list-inline mb-5">
+        <ul class="list-inline mb-5 wow tada">
           <li class="list-inline-item">
             <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/desmondser/">
               <i class="icon-social-linkedin"></i>
@@ -192,6 +219,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
+    <script>new WOW().init();</script>
 
   </body>
 
