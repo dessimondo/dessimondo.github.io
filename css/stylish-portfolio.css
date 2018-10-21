@@ -321,9 +321,9 @@ h6 {
   display: block;
   position: absolute;
   top: 60px;
-  width: 33%;
+  width: 66%;
   left: 0;
-  border-bottom: 3px solid;
+  border-top: 3px solid;
 }
 
 .video-item {
