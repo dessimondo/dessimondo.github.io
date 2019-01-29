@@ -440,12 +440,12 @@ h6 {
 
 .animated-box {
   width: 100%;
-  background-color: rgb(230, 170, 50);
+  /* background-color: rgb(230, 170, 50); */
   border-radius: 20px;
   margin: 0;
   display: flex;
   justify-content: center;
-  box-shadow: 0 2px 40px -2px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 2px 40px -2px rgba(0, 0, 0, 0.2); */
 }
 
 .animated-box:hover {
