@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Krub';
+  font-family: 'Roboto';
 }
 
 .btn-xl {
@@ -80,7 +80,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .text-faded {
@@ -484,7 +484,7 @@ h6 {
 
 .animated-box .desktop .layer {
   top: 13px;
-  left: 65px;
+  left: 64px;
   width: 75%;
   height: 100%;
   background: url(../img/desktop-screen.png);
