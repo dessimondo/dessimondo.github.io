@@ -21,6 +21,8 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://mynameismatthieu.com/WOW/dist/wow.min.js"></script>
 
   </head>
 
@@ -59,36 +61,30 @@
       </ul>
     </nav>
 
-    <!-- Header -->
-    <header class="d-flex">
-        <div class="container">
-          <div class="row mt-5">
-            <div class="col-lg-10 mx-auto text-center">
-              <h2 class="mb-5">All about mobile <span class="text-light">usability</span> and
-              <span class="text-secondary">design</span></h2>
-            </div>
-          </div>
-          <div class="row d-none d-md-block">
-              <div class="col-12">
-                  <div class="animated-box">
-                    <div class="box mobile">
-                        <div class="layer"></div>
-                        <div class="layer"></div>
-                        <div class="layer"></div>
-                        <div class="layer"></div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-    </header>
-
     <!-- Portfolio -->
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="row">
+          <a class="mt-5 mx-auto text-center" href="/"><img src="img/des.png" width="50%" alt="logo"></a>
+          <div class="col-12 mx-auto text-center">
+            <h2 class="my-5">All about mobile usability and design</h2>
+          </div>
+        </div>
+        <div class="row d-none d-md-block">
+            <div class="col-12 wow fadeInUp" data-wow-duration="1s">
+                <div class="animated-box">
+                  <div class="box mobile">
+                      <div class="layer"></div>
+                      <div class="layer"></div>
+                      <div class="layer"></div>
+                      <div class="layer"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
           <div class="col-md-6 col-lg-4">
-              <a class="project-item" href="https://invis.io/D2PZ0CLB3TG" target="_blank">
+              <a class="project-item wow fadeInUp" data-wow-duration="1s" href="https://invis.io/D2PZ0CLB3TG" target="_blank">
                 <span class="caption">
                   <span class="caption-content">
                     <h2>Insurance</h2>
@@ -107,7 +103,7 @@
               </a>
           </div>
           <div class="col-md-6 col-lg-4">
-              <a class="project-item" href="img/Sytorio-responsive.png" target="_blank">
+              <a class="project-item wow fadeInUp" data-wow-duration="1s" href="img/Sytorio-responsive.png" target="_blank">
                 <span class="caption">
                   <span class="caption-content">
                     <h2>Sytorio</h2>
@@ -126,7 +122,7 @@
               </a>
           </div>
           <div class="col-md-6 col-lg-4">
-              <a class="project-item" href="synetalent.html">
+              <a class="project-item wow fadeInUp" data-wow-duration="1s" href="synetalent.html">
                 <span class="caption">
                   <span class="caption-content">
                     <h2>SyneTalent</h2>
@@ -145,7 +141,7 @@
               </a>
           </div>
           <div class="col-md-6 col-lg-4">
-              <a class="project-item" href="healthy.html">
+              <a class="project-item wow fadeInUp" data-wow-duration="1s" href="healthy.html">
                 <span class="caption">
                   <span class="caption-content">
                     <h2>Healthy 365</h2>
@@ -164,7 +160,7 @@
               </a>
           </div>
           <div class="col-md-6 col-lg-4">
-              <div class="project-item">
+              <div class="project-item wow fadeInUp" data-wow-duration="1s">
                 <span class="caption">
                   <span class="caption-content">
                     <h2>Fox Sports</h2>
@@ -183,7 +179,7 @@
               </div>
           </div>
           <div class="col-md-6 col-lg-4">
-              <div class="project-item">
+              <div class="project-item wow fadeInUp" data-wow-duration="1s">
                 <span class="caption">
                   <span class="caption-content">
                     <h2>Keechia</h2>
@@ -202,7 +198,7 @@
               </div>
           </div>
           <div class="col-md-6 col-lg-4">
-              <a class="project-item" href="ciconia.html">
+              <a class="project-item wow fadeInUp" data-wow-duration="1s" href="ciconia.html">
                 <span class="caption">
                   <span class="caption-content">
                     <h2>Ciconia</h2>
@@ -262,6 +258,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
+    <script>new WOW().init();</script>
 
   </body>
 
