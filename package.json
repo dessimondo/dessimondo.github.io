@@ -1,17 +1,17 @@
 {
-    "title": "Stylish Portfolio",
-    "name": "startbootstrap-stylish-portfolio",
+    "title": "Desmond's Portfolio",
+    "name": "desmond-ser-portfolio",
     "version": "5.0.1",
-    "description": "A stylish portfolio HTML template built with Bootstrap",
+    "description": "Portfolio built with Bootstrap",
     "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
+        "desmond",
+        "ser",
+        "ui",
+        "ux",
+        "designer",
+        "developer"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/stylish-portfolio",
+    "homepage": "https://desmond-ser.com",
     "bugs": {
         "url": "https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/issues",
         "email": "feedback@startbootstrap.com"
@@ -19,7 +19,8 @@
     "license": "MIT",
     "author": "Start Bootstrap",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "David Miller (http://davidmiller.io/)",
+        "Desmond Ser (http://desmond-ser.com/)"
     ],
     "repository": {
         "type": "git",
