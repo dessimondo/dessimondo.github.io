@@ -84,6 +84,25 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4">
+              <a class="project-item wow fadeInUp" data-wow-duration="1s" href="/whatsup-mobile.html" target="_blank">
+                <span class="caption">
+                  <span class="caption-content">
+                    <h2>WhatSup</h2>
+                    <p class="mb-0">Food Hitching App</p>
+                  </span>
+                </span>
+                <div class="image-box">
+                  <div class="multi-images">
+                      <div class="layer"><img class="img-fluid" src="img/whatsup-mobile.jpg" alt="Whatsup"></div>
+                      <div class="layer"><img class="img-fluid" src="img/whatsup-login.png" alt="Whatsup"></div>
+                      <div class="layer"><img class="img-fluid" src="img/whatsup-main.png" alt="Whatsup"></div>
+                      <div class="layer"><img class="img-fluid" src="img/whatsup-foodorder.png" alt="Whatsup"></div>
+                      <div class="layer"><img class="img-fluid" src="img/whatsup-mobile.jpg" alt="Whatsup"></div>
+                  </div>
+                </div>
+              </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
               <a class="project-item wow fadeInUp" data-wow-duration="1s" href="https://invis.io/D2PZ0CLB3TG" target="_blank">
                 <span class="caption">
                   <span class="caption-content">
@@ -240,7 +259,7 @@
             </a>
           </li>
         </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Desmond Ser 2018</p>
+        <p class="text-muted small mb-0">Copyright &copy; Desmond Ser <span id="year">YYYY</span></p>
       </div>
     </footer>
 
@@ -259,6 +278,9 @@
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
     <script>new WOW().init();</script>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 
   </body>
 

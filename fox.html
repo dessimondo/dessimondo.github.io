@@ -12,6 +12,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
 
     <!-- Custom Fonts -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -72,23 +73,57 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12">              
+            <div class="col-md-4 col-md-push-8">
+              <div class="project-text wow fadeInLeft">
+                  <h2 class="mb-5">Login</h2>
+                  <p>The login page of the CMS allow users to save their login details locally</p>
+              </div>
+            </div>
+            <div class="col-md-8 col-md-pull-4 mb-5">              
               <div class="project-item">
                     <img class="img-fluid" src="img/foxsports1.jpg" alt="Fox Sports">
               </div>
-              <div class="project-item">
-                    <img class="img-fluid" src="img/foxsports.jpg" alt="Fox Sports">
+            </div>
+            <div class="col-md-4">
+              <div class="project-text wow fadeInLeft">
+                  <h2 class="mb-5">Listing</h2>
+                  <p>The listing page of the CMS shows the latest video being crawled from the editor's machine</p>
               </div>
+            </div>
+            <div class="col-md-8 mb-5">  
               <div class="project-item">
                     <img class="img-fluid" src="img/foxsports2.png" alt="Fox Sports">
               </div>
+            </div>
+            <div class="col-md-4 col-md-push-8">
+              <div class="project-text wow fadeInLeft">
+                  <h2 class="mb-5">Editing</h2>
+                  <p>A pop-up shows when editing the video and allow the different metadata to be edited.</p>
+              </div>
+            </div>
+            <div class="col-md-8 col-md-pull-4 mb-5">  
+              <div class="project-item">
+                    <img class="img-fluid" src="img/foxsports.jpg" alt="Fox Sports">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-text wow fadeInLeft">
+                  <h2 class="mb-5">Media</h2>
+                  <p>Uploading media is one of the key features of this system</p>
+              </div>
+            </div>
+            <div class="col-md-8 mb-5">  
               <div class="project-item">
                     <img class="img-fluid" src="img/foxsports3.png" alt="Fox Sports">
               </div>
             </div>
         </div>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="container">
         <div class="text-center">
-            <a href="javascript: history.back();"><i class="icon-arrow-left-circle"></i> Back</a>
+            <a class="btn btn-secondary" href="javascript: history.back();"><i class="icon-arrow-left-circle"></i> Back</a>
         </div>
       </div>
     </section>
@@ -113,7 +148,7 @@
             </a>
           </li>
         </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Desmond Ser 2018</p>
+        <p class="text-muted small mb-0">Copyright &copy; Desmond Ser <span id="year">YYYY</span></p>
       </div>
     </footer>
 
@@ -132,6 +167,9 @@
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
     <script>new WOW().init();</script>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 
   </body>
 

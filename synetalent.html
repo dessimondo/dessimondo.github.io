@@ -69,7 +69,7 @@
                 <p class="mt-5 mb-5">
                     SyneTalent is a human resource management portal built to view on both desktop and mobile.
                 </p>
-                <a class="btn btn-primary" href="https://projects.invisionapp.com/share/RCO2ST1A6KW" target="blank_">Invision Prototype</a>
+                <a class="btn btn-primary" href="https://projects.invisionapp.com/share/RCO2ST1A6KW" target="blank_">Invision Prototype</a> &nbsp;
                 <a class="btn btn-secondary" href="https://dessimondo.github.io/SyneTalent/" target="blank_">Actual Build</a>
             </div>
         </div>
@@ -201,7 +201,7 @@
             </a>
           </li>
         </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Desmond Ser 2018</p>
+        <p class="text-muted small mb-0">Copyright &copy; Desmond Ser <span id="year">YYYY</span></p>
       </div>
     </footer>
 
@@ -220,6 +220,9 @@
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
     <script>new WOW().init();</script>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 
   </body>
 

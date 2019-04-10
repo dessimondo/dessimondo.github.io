@@ -67,9 +67,11 @@
             <div class="col-lg-10 mx-auto text-center wow fadeInDown">
                 <h2 class="mt-5 mb-5"><span class="text-secondary">Whatsup</span></h2>
                 <p class="mt-5 mb-5">
-                    Whatsup is a food hitching website for both the user and deliverer.
+                  Whatsup is a food hitching web app for two target groups - the people who want to order food, and the people who delivers. <br>
+                  Following the law of demand and supply, food orders are only fulfilled if there are people patronising the shop physically.
                 </p>
-                <a class="btn btn-primary" href="https://ntuwhatsup.000webhostapp.com/" target="blank_">Actual Build</a>
+                <a class="btn btn-primary" href="https://ntuwhatsup.000webhostapp.com/" target="blank_">Actual Build</a> &nbsp;
+                <a class="btn btn-secondary" href="/whatsup-mobile.html" target="blank_">Mobile App</a>
             </div>
         </div>
       </div>
@@ -175,7 +177,7 @@
             </a>
           </li>
         </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Desmond Ser 2018</p>
+        <p class="text-muted small mb-0">Copyright &copy; Desmond Ser <span id="year">YYYY</span></p>
       </div>
     </footer>
 
@@ -194,6 +196,9 @@
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
     <script>new WOW().init();</script>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 
   </body>
 
