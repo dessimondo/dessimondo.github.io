@@ -1,18 +1,67 @@
-footer.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  .social-link {
-    display: block;
-    height: 4rem;
-    width: 4rem;
-    line-height: 4.3rem;
-    font-size: 1.5rem;
-    background-color: $primary;
-    transition: background-color 0.15s ease-in-out;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-    &:hover {
-      background-color: darken($primary, 10%);
-      text-decoration: none;
-    }
-  }
+/* Footer Area css
+============================================================================================ */
+.blog_version {
+	.footer_area {
+		background: #f9f9fd;
+		&:before {
+			content: none;
+		}
+	}
 }
+.footer_area {
+	padding: 120px 0;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: -200px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		background: #f9f9fd;
+		z-index: -1;
+	}
+	@media (max-width: 1024px) {
+		padding: 60px 0;
+	}
+	.footer_logo {
+		text-align: center;
+		h4 {
+			font-size: 20px;
+			color: #000000;
+			margin-top: 35px;
+			text-transform: uppercase;
+		}
+	}
+	.footer_social {
+		text-align: center;
+		margin: 25px 0px 30px;
+		a {
+			padding: 0 20px;
+			i {
+				color: #788489;
+				font-size: 22px;
+				@include transition();
+				@media (max-width: 576px) {
+					font-size: 25px;
+				}
+				&:hover {
+					color: $primary-color2;
+				}
+			}
+		}
+	}
+
+	.footer_bottom {
+		text-align: center;
+		p {
+			margin-bottom: 0;
+		}
+		a {
+			color: $primary-color2;
+		}
+	}
+}
+
+/* End Footer Area css
+============================================================================================ */
