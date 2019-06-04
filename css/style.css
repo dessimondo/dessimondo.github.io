@@ -2719,16 +2719,40 @@ h6 {
   .project-image {
     display: block;
     position: relative;
-    box-shadow: 0 5px 20px -5px #6863e660;
+    box-shadow: 0 10px 20px -10px #6863e666;
   }
   
   .mobile-image {
     display: block;
     position: relative;
-    border: solid rgba(243, 243, 243, 1);
-    border-width: 30px 10px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px -5px #6863e660;
+    padding: 18% 8% 28% 13%;
+  }
+
+  .phonex-image {
+    border-radius: 25px;
+  }
+
+  .phonex-wrapper {
+    display: block;
+    position: relative;
+    padding: 6% 8% 15% 12%;
+  }
+
+  .phonex-notch {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 6%;
+    width: 44%;
+    margin: 0% 18%;
+    background-color: #ffffff;
+    border-radius: 22px;
+  }
+
+  .mobile-wrapper {
+    background: url(../img/iPhonex.png) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
   }
 
 /* End Portfolio Area css
