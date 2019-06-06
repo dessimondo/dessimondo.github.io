@@ -2719,7 +2719,7 @@ h6 {
   .project-image {
     display: block;
     position: relative;
-    box-shadow: 0 10px 20px -10px #6863e666;
+    box-shadow: 0 10px 20px -10px #4c4c8866;
   }
   
   .mobile-image {
@@ -2753,6 +2753,19 @@ h6 {
     background: url(../img/iPhonex.png) no-repeat;
     background-size: 100% 100%;
     width: 100%;
+  }
+
+  .hvr-grow {
+    vertical-align: middle;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .hvr-grow:hover,
+  .hvr-grow:focus,
+  .hvr-grow:active {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px -10px #4c4c8866;
   }
 
 /* End Portfolio Area css
