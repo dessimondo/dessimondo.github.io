@@ -23,15 +23,15 @@
 
 var context;
 var gainNode;
-var yamBuffer = null;
-var sengBuffer = null;
-var ymymymBuffer = null;
-var yamSource = null;
-var sengSource = null;
-var ymymymSource = null;
-var yamming;
-var ymymyming;
-var yamcount = 0;
+var huatBuffer = null;
+var huatahBuffer = null;
+var hahaBuffer = null;
+var huatSource = null;
+var huatahSource = null;
+var hahaSource = null;
+var huating;
+var hahaing;
+var huatcount = 0;
 var pitch = 1.0;
 var sleepcount;
 var hiddendiv;
@@ -53,9 +53,9 @@ async function init() {
 		alert('Web Audio API is not supported in this browser');
 	}
 
-	loadyam("yam.mp3");
-	loadseng("seng.mp3");
-	loadymymym("ymymym.mp3");
+	loadhuat("huat.mp3");
+	loadhuatah("huatah.mp3");
+	loadhaha("huatah.mp3");
 
     //wait up to 10 seconds for the mp3's to load
     sleepcount=0;
@@ -63,21 +63,21 @@ async function init() {
 	{
 		await sleep(100);
 		sleepcount=sleepcount+1;
-		if ((yamBuffer!=null)&&(sengBuffer!=null)&&(ymymymBuffer!=null)) sleepcount=100;
+		if ((huatBuffer!=null)&&(huatahBuffer!=null)&&(hahaBuffer!=null)) sleepcount=100;
 	}
 
-	var el = document.getElementById("yamsengpad");
+	var el = document.getElementById("huatbutton");
 	el.addEventListener("touchstart", handleStart, false);
 	el.addEventListener("touchend", handleEnd, false);
 	el.addEventListener("touchcancel", handleCancel, false);
 	el.addEventListener("touchmove", handleMove, false);
 	el.addEventListener("touchforcechange", handleForceChange, false);
-    el.style.display=""; //unhide yamsengpad only after mp3s loaded
-	yamming = 0;
-	ymymyming = 0;
+    el.style.display=""; //unhide huatbutton only after mp3s loaded
+	huating = 0;
+	hahaing = 0;
 }
 
-function loadyam(url) {
+function loadhuat(url) {
 	var request = new XMLHttpRequest();
 	request.open('GET', url, true);
 	request.responseType = 'arraybuffer';
@@ -85,7 +85,7 @@ function loadyam(url) {
 	// Decode asynchronously
 	request.onload = function() {
 		context.decodeAudioData(request.response, function(buffer) {
-			yamBuffer = buffer;
+			huatBuffer = buffer;
 		}, function(error) {
 			console.error('decodeAudioData error', error);
 		});
@@ -93,7 +93,7 @@ function loadyam(url) {
 	request.send();
 }
 
-function loadseng(url) {
+function loadhuatah(url) {
 	var request = new XMLHttpRequest();
 	request.open('GET', url, true);
 	request.responseType = 'arraybuffer';
@@ -101,7 +101,7 @@ function loadseng(url) {
 	// Decode asynchronously
 	request.onload = function() {
 		context.decodeAudioData(request.response, function(buffer) {
-			sengBuffer = buffer;
+			huatahBuffer = buffer;
 		}, function(error) {
 			console.error('decodeAudioData error', error);
 		});
@@ -109,7 +109,7 @@ function loadseng(url) {
 	request.send();
 }
 
-function loadymymym(url) {
+function loadhaha(url) {
 	var request = new XMLHttpRequest();
 	request.open('GET', url, true);
 	request.responseType = 'arraybuffer';
@@ -117,7 +117,7 @@ function loadymymym(url) {
 	// Decode asynchronously
 	request.onload = function() {
 		context.decodeAudioData(request.response, function(buffer) {
-			ymymymBuffer = buffer;
+			hahaBuffer = buffer;
 		}, function(error) {
 			console.error('decodeAudioData error', error);
 		});
@@ -144,30 +144,30 @@ function stopSound(source){
 function handleStart(evt) {
 	evt.preventDefault();
 
-	if (yamming == 0) {
-		yamcount = yamcount + 1;
+	if (huating == 0) {
+		huatcount = huatcount + 1;
 		pitch=1.0;
-		if (yamcount > 5) pitch = 0.875 + (Math.random() / 4.0);
+		if (huatcount > 5) pitch = 0.875 + (Math.random() / 4.0);
 
 		unmute2(context);
-		stopSound(sengSource);
-		stopSound(yamSource);
-		yamSource = playSound(yamBuffer,pitch);
-		yamming = 1;
+		stopSound(huatahSource);
+		stopSound(huatSource);
+		huatSource = playSound(huatBuffer,pitch);
+		huating = 1;
 		
-		//reset ymymyming just to play safe
-		if ((evt.touches.length < 2) && (ymymyming == 1)) {
-			stopSound(ymymymSource);
-			ymymyming = 0;
+		//reset hahaing just to play safe
+		if ((evt.touches.length < 2) && (hahaing == 1)) {
+			stopSound(hahaSource);
+			hahaing = 0;
 		}
 	}
 
-	if ((evt.touches.length > 1) && (ymymyming == 0)) //more than one finger ymymym
+	if ((evt.touches.length > 1) && (hahaing == 0)) //more than one finger haha
 	{
-		var ymymympitch=1.0;
-		if (yamcount > 5) ymymympitch= 0.875 + (Math.random() / 4.0);
-		ymymymSource = playSound(ymymymBuffer,ymymympitch);
-		ymymyming = 1;
+		var hahapitch=1.0;
+		if (huatcount > 5) hahapitch= 0.875 + (Math.random() / 4.0);
+		hahaSource = playSound(hahaBuffer,hahapitch);
+		hahaing = 1;
 	}
 
 }
@@ -175,24 +175,24 @@ function handleStart(evt) {
 async function handleEnd(evt) {
 	evt.preventDefault();
 
-	if ((evt.touches.length < 2) && (ymymyming == 1)) {
-		stopSound(ymymymSource);
-		ymymyming = 0;
+	if ((evt.touches.length < 2) && (hahaing == 1)) {
+		stopSound(hahaSource);
+		hahaing = 0;
 	}
 
 	if (evt.touches.length == 0) //all fingers lifted off
 	{
-		yamming = 0;
-		if (yamming==0 && gainNode!=null) 
+		huating = 0;
+		if (huating==0 && gainNode!=null) 
 			{gainNode.gain.value = 0.50;await sleep(100);}
-		if (yamming==0 && gainNode!=null) 
+		if (huating==0 && gainNode!=null) 
 			{gainNode.gain.value = 0.25;await sleep(100);}
-		if (yamming==0 && gainNode!=null) 
+		if (huating==0 && gainNode!=null) 
 			{gainNode.gain.value = 0;await sleep(100);}
 
-		if (yamming==0) stopSound(yamSource);
-		if (yamming==0 && gainNode!=null) gainNode.gain.value = 1.0;
-		if (yamming==0) sengSource = playSound(sengBuffer,pitch);
+		if (huating==0) stopSound(huatSource);
+		if (huating==0 && gainNode!=null) gainNode.gain.value = 1.0;
+		if (huating==0) huatahSource = playSound(huatahBuffer,pitch);
 	}
 }
 
@@ -233,12 +233,12 @@ function unmute2(context) {
 
 </script>
 
-<table id="yamsengpad" style="height: 80%; width: 80%; position: absolute; top: 10%; left: 10%; border: none;">
+<table id="huatbutton" style="height: 80%; width: 80%; position: absolute; top: 10%; left: 10%; border: none;">
      <tbody><tr>
         <td>
-          <div style="font-family:Helvetica,Arial,sans-serif;font-size:48pt;text-align:center;color: white">
+          <div style="font-family:Helvetica,Arial,sans-serif;font-size:36pt;text-align:center;color: white">
 
-<div style="font-family:Helvetica,Arial,sans-serif;font-size:16pt;text-align:center;color: white">TAP & HOLD TO</div>HUAT
+<div style="font-family:Helvetica,Arial,sans-serif;font-size:12pt;text-align:center;color: white">TAP & HOLD TO</div>HUAT
 </div>
         </td>
     </tr>
