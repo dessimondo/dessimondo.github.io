@@ -188,7 +188,7 @@ button:focus {
   border: double 2px transparent;
   box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3); }
   .primary_btn span {
-    padding: 0 42px; }
+    padding: 0 24px; }
   .primary_btn.tr-bg {
     background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #6863e6, #5aa1ec);
     border: 2px solid transparent;
@@ -3142,8 +3142,8 @@ h6 {
 
   .home_banner_area .banner_inner .banner_content {
     margin-top: 0px; }
-    .home_banner_area .banner_inner .banner_content .primary_btn {
-      display: none; }
+    /* .home_banner_area .banner_inner .banner_content .primary_btn {
+      display: none; } */
 
   /* Blog Page Area css
   ============================================================================================ */
